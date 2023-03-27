@@ -1,0 +1,15 @@
+executable = Sep12.sh
+arguments = $(Process)
+error = joblogs/$(Process).err.txt
+output = joblogs/$(Process).out.txt
+log = joblogs/$(Process).log.txt
+getenv = True
+stream_output = True
+request_cpus = 1
+request_gpus = 1
+request_memory = 16GB
+notify_user = amin.ch90@gmail.com
+notification = always
++MaxRunningPrice = 500
++RunningPriceExceededAction = "restart"
+queue 1
